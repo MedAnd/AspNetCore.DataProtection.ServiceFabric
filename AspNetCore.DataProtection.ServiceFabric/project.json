@@ -1,0 +1,40 @@
+﻿{
+  "title": "AspNetCore.DataProtection.ServiceFabric",
+  "description": "AspNetCore.DataProtection.ServiceFabric",
+  "version": "1.0.0-*",
+
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "preserveCompilationContext": true,
+    "compile": {
+      "exclude": [
+        "PackageRoot"
+      ]
+    }
+  },
+
+  "dependencies": {
+    "Microsoft.Extensions.Configuration": "1.1.0",
+    "Microsoft.Extensions.Configuration.Binder": "1.1.0",
+    "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
+    "Microsoft.Extensions.Configuration.Json": "1.1.0",
+    "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
+    "Microsoft.ServiceFabric": "5.4.145",
+    "Microsoft.ServiceFabric.Services": "2.4.145"
+  },
+
+  "frameworks": {
+    "net46": {
+      "frameworkAssemblies": {
+        "System.Xml": "4.0.0.0",
+        "System.Xml.Linq": "4.0.0.0"
+      }
+    }
+  },
+
+  "runtimes": {
+    "win7-x64": {}
+  }
+
+}
+

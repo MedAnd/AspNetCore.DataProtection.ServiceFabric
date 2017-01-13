@@ -1,0 +1,47 @@
+{
+  "dependencies": {
+    "AspNetCore.DataProtection.ServiceFabric": "1.0.0-*",
+    "Microsoft.AspNetCore.Mvc": "1.1.0",
+    "Microsoft.AspNetCore.Routing": "1.1.0",
+    "Microsoft.AspNetCore.Server.WebListener": "1.1.0",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
+    "Microsoft.AspNetCore.Hosting": "1.1.0",
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
+    "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
+    "Microsoft.Extensions.Configuration.Json": "1.1.0",
+    "Microsoft.Extensions.Logging": "1.1.0",
+    "Microsoft.Extensions.Logging.Console": "1.0.0",
+    "Microsoft.Extensions.Logging.Debug": "1.0.0",
+    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
+    "Microsoft.ServiceFabric": "5.4.145",
+    "Microsoft.ServiceFabric.AspNetCore.WebListener": "2.4.145-preview",
+    "Microsoft.ServiceFabric.Data": "2.4.145",
+    "Microsoft.ServiceFabric.Services": "2.4.145",
+    "Swashbuckle.AspNetCore": "1.0.0-rc1",
+    "CommandLineParser": "2.1.1-beta",
+    "Microsoft.ServiceFabric.AspNetCore.Kestrel": "2.4.145-preview"
+  },
+
+  "tools": {
+  },
+
+  "frameworks": {
+    "net46": {}
+  },
+
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "preserveCompilationContext": true
+  },
+
+  "publishOptions": {
+    "include": [
+      "wwwroot",
+      "**/*.cshtml",
+      "appsettings.json"
+    ]
+  },
+
+  "scripts": {
+  }
+}
