@@ -5,16 +5,8 @@ using System.IO;
 
 namespace ServiceFabric.DataProtection.Web
 {
-    /// <summary>
-    /// 
-    /// </summary>
     internal static class WebHostBuilderHelper
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="serverType"></param>
-        /// <returns></returns>
         public static IWebHost GetServiceFabricWebHost(ServerType serverType)
         {
             var endpoint = FabricRuntime.GetActivationContext().GetEndpoint("ServiceEndpoint");
@@ -22,14 +14,7 @@ namespace ServiceFabric.DataProtection.Web
 
             return GetWebHost(endpoint.Protocol.ToString(), endpoint.Port.ToString(), serverType);
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="protocol"></param>
-        /// <param name="port"></param>
-        /// <param name="serverType"></param>
-        /// <returns></returns>
+        
         public static IWebHost GetWebHost(string protocol, string port, ServerType serverType)
         {
             switch (serverType)
@@ -57,12 +42,6 @@ namespace ServiceFabric.DataProtection.Web
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="webHostBuilder"></param>
-        /// <param name="protocol"></param>
-        /// <param name="port"></param>
         static IWebHost ConfigureWebHostBuilder(IWebHostBuilder webHostBuilder, string protocol, string port)
         {
             return webHostBuilder
@@ -73,10 +52,7 @@ namespace ServiceFabric.DataProtection.Web
                 .Build();
         }
     }
-
-    /// <summary>
-    /// 
-    /// </summary>
+    
     enum ServerType
     {
         Kestrel,

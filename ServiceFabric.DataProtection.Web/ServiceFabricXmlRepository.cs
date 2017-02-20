@@ -8,26 +8,14 @@ using System.Xml.Linq;
 
 namespace ServiceFabric.DataProtection.Web
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public class ServiceFabricXmlRepository : IXmlRepository
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         public IReadOnlyCollection<XElement> GetAllElements()
         {
             var proxy = ServiceProxy.Create<IDataProtectionService>(new Uri("fabric:/ServiceFabric.DataProtection/DataProtectionService"), new ServicePartitionKey());
             return proxy.GetAllDataProtectionElements().Result.AsReadOnly();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="element"></param>
-        /// <param name="friendlyName"></param>
         public void StoreElement(XElement element, string friendlyName)
         {
             if (element == null)

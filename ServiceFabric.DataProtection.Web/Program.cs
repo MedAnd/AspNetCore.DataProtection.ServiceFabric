@@ -6,14 +6,8 @@ using System.Threading;
 
 namespace ServiceFabric.DataProtection.Web
 {
-    /// <summary>
-    /// 
-    /// </summary>
     internal static class Program
     {
-        /// <summary>
-        /// This is the entry point of the service host process.
-        /// </summary>
         public static void Main(string[] args)
         {
             var parser = new Parser(with => 
@@ -69,9 +63,6 @@ namespace ServiceFabric.DataProtection.Web
         }
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
     internal sealed class Options
     {
         [Option(Default = "weblistener", HelpText = "Host - Options [weblistener] or [kestrel] or [servicefabric-weblistener] or [servicefabric-kestrel]")]

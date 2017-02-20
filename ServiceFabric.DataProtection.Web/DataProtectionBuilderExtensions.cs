@@ -5,16 +5,8 @@ using System;
 
 namespace ServiceFabric.DataProtection.Web
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public static class DataProtectionBuilderExtensions
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="builder"></param>
-        /// <returns></returns>
         public static IDataProtectionBuilder PersistKeysToServiceFabric(this IDataProtectionBuilder builder)
         {
             if (builder == null)
@@ -25,12 +17,6 @@ namespace ServiceFabric.DataProtection.Web
             return builder.Use(ServiceDescriptor.Singleton<IXmlRepository>(services => new ServiceFabricXmlRepository()));
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="builder"></param>
-        /// <param name="descriptor"></param>
-        /// <returns></returns>
         public static IDataProtectionBuilder Use(this IDataProtectionBuilder builder, ServiceDescriptor descriptor)
         {
             if (builder == null)

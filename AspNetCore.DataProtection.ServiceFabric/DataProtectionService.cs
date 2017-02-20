@@ -14,24 +14,11 @@ namespace AspNetCore.DataProtection.ServiceFabric
 {
     internal sealed class DataProtectionService : StatefulService, IDataProtectionService
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="context"></param>
-        /// <param name="stateManager"></param>
-        public DataProtectionService(StatefulServiceContext context, IReliableStateManager stateManager)
-            : base(context, stateManager as IReliableStateManagerReplica)
+        public DataProtectionService(StatefulServiceContext context, IReliableStateManager stateManager) : base(context, stateManager as IReliableStateManagerReplica)
         {
 
         }
 
-        /// <summary>
-        /// Optional override to create listeners (e.g., HTTP, Service Remoting, WCF, etc.) for this service replica to handle client or user requests.
-        /// </summary>
-        /// <remarks>
-        /// For more information on service communication, see http://aka.ms/servicefabricservicecommunication
-        /// </remarks>
-        /// <returns>A collection of listeners.</returns>
         protected override IEnumerable<ServiceReplicaListener> CreateServiceReplicaListeners()
         {
             return new[]
@@ -40,21 +27,6 @@ namespace AspNetCore.DataProtection.ServiceFabric
             };
         }
 
-        /// <summary>
-        /// This is the main entry point for your service replica.
-        /// This method executes when this replica of your service becomes primary and has write status.
-        /// </summary>
-        /// <param name="cancellationToken">Canceled when Service Fabric needs to shut down this service replica.</param>
-        protected override Task RunAsync(CancellationToken cancellationToken)
-        {
-            //No Running code
-            return Task.FromResult(0);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         public async Task<List<XElement>> GetAllDataProtectionElements()
         {
             var elements = new List<XElement>();
@@ -75,11 +47,6 @@ namespace AspNetCore.DataProtection.ServiceFabric
             return elements;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="element"></param>
-        /// <returns></returns>
         public async Task<XElement> AddDataProtectionElement(XElement element)
         {
             Guid id = Guid.Parse(element.Attribute("id").Value);

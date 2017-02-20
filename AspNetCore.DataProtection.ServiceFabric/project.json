@@ -1,6 +1,6 @@
-﻿{
+{
   "title": "AspNetCore.DataProtection.ServiceFabric",
-  "description": "AspNetCore.DataProtection.ServiceFabric",
+  "description":  "www.medic-consulting.com",
   "version": "1.0.0-*",
 
   "buildOptions": {
@@ -19,8 +19,8 @@
     "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
     "Microsoft.Extensions.Configuration.Json": "1.1.0",
     "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
-    "Microsoft.ServiceFabric": "5.4.145",
-    "Microsoft.ServiceFabric.Services": "2.4.145"
+    "Microsoft.ServiceFabric": "5.4.164",
+    "Microsoft.ServiceFabric.Services": "2.4.164"
   },
 
   "frameworks": {

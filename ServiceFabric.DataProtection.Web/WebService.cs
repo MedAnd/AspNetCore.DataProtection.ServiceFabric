@@ -6,9 +6,6 @@ using System.Fabric;
 
 namespace ServiceFabric.DataProtection.Web
 {
-    /// <summary>
-    /// The FabricRuntime creates an instance of this class for each service type instance. 
-    /// </summary>
     internal sealed class WebService : StatelessService
     {
         /// <summary>
@@ -22,10 +19,6 @@ namespace ServiceFabric.DataProtection.Web
             _serverType = serverType;
         }
 
-        /// <summary>
-        /// Optional override to create listeners (like tcp, http) for this service instance.
-        /// </summary>
-        /// <returns>The collection of listeners.</returns>
         protected override IEnumerable<ServiceInstanceListener> CreateServiceInstanceListeners()
         {
             return new ServiceInstanceListener[]
