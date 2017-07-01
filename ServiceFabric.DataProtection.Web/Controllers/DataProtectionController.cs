@@ -14,7 +14,7 @@ namespace ServiceFabric.DataProtection.Web.Controllers
         {
             var protector = HttpContext.RequestServices.GetDataProtector("servicefabric.dataprotection-purpose");
             var protectedData = protector.Protect(value);
-            
+
             return $"Protect returned: {protectedData}";
         }
 

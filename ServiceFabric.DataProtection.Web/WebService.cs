@@ -29,14 +29,14 @@ namespace ServiceFabric.DataProtection.Web
                     {
                         case ServerType.WebListener :
                             {
-                                return new WebListenerCommunicationListener(serviceContext, "ServiceEndpoint", url =>
-                                {
+                                return new WebListenerCommunicationListener(serviceContext, "ServiceEndpoint", (url,listener) =>
+                                {   
                                     return WebHostBuilderHelper.GetServiceFabricWebHost(_serverType);
                                 });
                             }
                         case ServerType.Kestrel:
                             {
-                                return new KestrelCommunicationListener(serviceContext, "ServiceEndpoint", url =>
+                                return new KestrelCommunicationListener(serviceContext, "ServiceEndpoint", (url,listener) =>
                                 {
                                     return WebHostBuilderHelper.GetServiceFabricWebHost(_serverType);
                                 });
@@ -44,7 +44,7 @@ namespace ServiceFabric.DataProtection.Web
                         default:
                             return null;
                     }
-                })                  
+                })
             };
         }
     }

@@ -7,7 +7,7 @@
   <ServiceTypes>
     <!-- This is the name of your ServiceType. 
          This name must match the string used in RegisterServiceType call in Program.cs. -->
-    <StatefulServiceType ServiceTypeName="DataProtectionServiceType" HasPersistedState="true" />
+    <StatefulServiceType ServiceTypeName="DataProtectionServiceType"  HasPersistedState="true" />
   </ServiceTypes>
 
   <!-- Code package is your service executable. -->
@@ -15,6 +15,7 @@
     <EntryPoint>
       <ExeHost>
         <Program>AspNetCore.DataProtection.ServiceFabric.exe</Program>
+        <WorkingFolder>CodePackage</WorkingFolder>
       </ExeHost>
     </EntryPoint>
   </CodePackage>
@@ -36,4 +37,5 @@
       <Endpoint Name="ReplicatorEndpoint" />
     </Endpoints>
   </Resources>
+
 </ServiceManifest>

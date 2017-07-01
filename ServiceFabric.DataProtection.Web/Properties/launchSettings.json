@@ -1,9 +1,9 @@
-{
+﻿{
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:9600/",
+      "applicationUrl": "http://localhost:10713/",
       "sslPort": 0
     }
   },
@@ -11,18 +11,19 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+      "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Web": {
+    "ServiceFabric.DataProtection.Web": {
       "commandName": "Project",
-      "commandLineArgs": "--host weblistener",
       "launchBrowser": true,
-      "launchUrl": "http://localhost:5000/swagger/",
+      "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "http://localhost:10714"
     }
   }
 }
