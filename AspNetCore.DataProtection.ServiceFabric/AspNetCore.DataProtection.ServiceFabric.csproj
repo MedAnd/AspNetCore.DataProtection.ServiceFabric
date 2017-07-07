@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <Description>Learn more about this project at www.medic-consulting.com</Description>
+    <RepositoryUrl>https://github.com/MedAnd/AspNetCore.DataProtection.ServiceFabric</RepositoryUrl>
+    <AssemblyTitle>AspNetCore.DataProtection.ServiceFabric</AssemblyTitle>
+    <TargetFramework>net46</TargetFramework>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <AssemblyName>AspNetCore.DataProtection.ServiceFabric</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>AspNetCore.DataProtection.ServiceFabric</PackageId>
+    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyRepositoryUrl>false</GenerateAssemblyRepositoryUrl>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="PackageRoot\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ServiceFabric" Version="5.6.220" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="2.6.220" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services.Remoting" Version="2.6.220" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>

@@ -1,7 +1,7 @@
-﻿using Microsoft.ServiceFabric.Services.Remoting;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Microsoft.ServiceFabric.Services.Remoting;
 
 namespace AspNetCore.DataProtection.ServiceFabric
 {

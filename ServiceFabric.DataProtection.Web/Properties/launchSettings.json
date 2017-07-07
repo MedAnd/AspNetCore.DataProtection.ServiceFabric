@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Web": {
+    "ServiceFabric.DataProtection.Web": {
       "commandName": "Project",
       "commandLineArgs": "--host weblistener",
       "launchBrowser": true,
