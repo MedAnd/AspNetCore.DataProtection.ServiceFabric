@@ -6,8 +6,8 @@
   </Section>
   <!-- This is used for securing StateManager's replication traffic. -->
   <Section Name="ReplicatorSecurityConfig" />
-
-  <!-- Add your custom configuration sections and parameters here. -->
+  
+  <!-- Add your custom configuration sections and parameters here -->
   <!--
   <Section Name="MyConfigSection">
     <Parameter Name="MyParameter" Value="Value1" />
