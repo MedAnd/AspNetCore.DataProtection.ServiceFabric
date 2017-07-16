@@ -1,6 +1,7 @@
 ﻿using Microsoft.ServiceFabric.Services.Communication.AspNetCore;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
+
 using System.Collections.Generic;
 using System.Fabric;
 
@@ -8,9 +9,6 @@ namespace ServiceFabric.DataProtection.Web
 {
     internal sealed class WebService : StatelessService
     {
-        /// <summary>
-        /// 
-        /// </summary>
         ServerType _serverType;
 
         public WebService(StatelessServiceContext context, ServerType serverType)
@@ -29,14 +27,14 @@ namespace ServiceFabric.DataProtection.Web
                     {
                         case ServerType.WebListener :
                             {
-                                return new WebListenerCommunicationListener(serviceContext, "ServiceEndpoint", url =>
+                                return new WebListenerCommunicationListener(serviceContext, "ServiceEndpoint", (url, listener) =>
                                 {
                                     return WebHostBuilderHelper.GetServiceFabricWebHost(_serverType);
                                 });
                             }
                         case ServerType.Kestrel:
                             {
-                                return new KestrelCommunicationListener(serviceContext, "ServiceEndpoint", url =>
+                                return new KestrelCommunicationListener(serviceContext, "ServiceEndpoint", (url, listener) =>
                                 {
                                     return WebHostBuilderHelper.GetServiceFabricWebHost(_serverType);
                                 });

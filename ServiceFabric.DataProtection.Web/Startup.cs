@@ -46,11 +46,16 @@ namespace ServiceFabric.DataProtection.Web
             //loggerFactory.AddDebug();
 
             app.UseMvc();
-            app.UseSwaggerUi(c =>
+
+            app.UseSwagger(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "AspNetCore.DataProtection.ServiceFabric API v1");
+                c.PreSerializeFilters.Add((swagger, httpReq) => swagger.Host = httpReq.Host.Value);
             });
-            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "AspNetCore.DataProtection.ServiceFabric API V1 Docs");
+            });
         }
     }
 }

@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "ServiceFabric.DataProtection", "ServiceFabric.DataProtection\ServiceFabric.DataProtection.sfproj", "{A412C9FE-DD03-40D8-80F7-F9806A083140}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ServiceFabric.DataProtection.Web", "ServiceFabric.DataProtection.Web\ServiceFabric.DataProtection.Web.xproj", "{47EA520C-F137-4AA1-9350-E1149C1C64EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceFabric.DataProtection.Web", "ServiceFabric.DataProtection.Web\ServiceFabric.DataProtection.Web.csproj", "{47EA520C-F137-4AA1-9350-E1149C1C64EB}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNetCore.DataProtection.ServiceFabric", "AspNetCore.DataProtection.ServiceFabric\AspNetCore.DataProtection.ServiceFabric.xproj", "{7FBABD19-5B5A-47E7-8E20-C62A9751B354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.DataProtection.ServiceFabric", "AspNetCore.DataProtection.ServiceFabric\AspNetCore.DataProtection.ServiceFabric.csproj", "{7FBABD19-5B5A-47E7-8E20-C62A9751B354}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
