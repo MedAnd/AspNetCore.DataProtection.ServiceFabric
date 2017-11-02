@@ -17,7 +17,7 @@
     },
     "ServiceFabric.DataProtection.Web": {
       "commandName": "Project",
-      "commandLineArgs": "--host weblistener",
+      "commandLineArgs": "--host kestrel",
       "launchBrowser": true,
       "launchUrl": "http://localhost:5000/swagger/",
       "environmentVariables": {

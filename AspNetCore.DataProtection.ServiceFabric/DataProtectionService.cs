@@ -15,7 +15,7 @@ namespace AspNetCore.DataProtection.ServiceFabric
 {
     internal sealed class DataProtectionService : StatefulService, IDataProtectionService
     {
-        public DataProtectionService(StatefulServiceContext context, IReliableStateManager stateManager) : base(context, stateManager as IReliableStateManagerReplica)
+        public DataProtectionService(StatefulServiceContext context, IReliableStateManager stateManager) : base(context, stateManager as IReliableStateManagerReplica2)
         {
 
         }

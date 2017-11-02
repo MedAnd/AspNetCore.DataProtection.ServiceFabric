@@ -56,6 +56,7 @@ namespace ServiceFabric.DataProtection.Web
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "AspNetCore.DataProtection.ServiceFabric API V1 Docs");
             });
+           
         }
     }
 }
