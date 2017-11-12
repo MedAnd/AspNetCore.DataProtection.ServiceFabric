@@ -1,9 +1,7 @@
-﻿using Microsoft.ServiceFabric.Data;
-using Microsoft.ServiceFabric.Data.Collections;
+﻿using Microsoft.ServiceFabric.Data.Collections;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
-using Microsoft.ServiceFabric.Services.Runtime;
 using Microsoft.ServiceFabric.Services.Remoting.Runtime;
-
+using Microsoft.ServiceFabric.Services.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Fabric;
@@ -15,17 +13,13 @@ namespace AspNetCore.DataProtection.ServiceFabric
 {
     internal sealed class DataProtectionService : StatefulService, IDataProtectionService
     {
-        public DataProtectionService(StatefulServiceContext context, IReliableStateManager stateManager) : base(context, stateManager as IReliableStateManagerReplica2)
+        public DataProtectionService(StatefulServiceContext context) : base(context)
         {
-
         }
 
         protected override IEnumerable<ServiceReplicaListener> CreateServiceReplicaListeners()
         {
-            return new[]
-            {
-                new ServiceReplicaListener(context => this.CreateServiceRemotingListener(context))
-            };
+            return this.CreateServiceRemotingReplicaListeners();
         }
 
         public async Task<List<XElement>> GetAllDataProtectionElements()

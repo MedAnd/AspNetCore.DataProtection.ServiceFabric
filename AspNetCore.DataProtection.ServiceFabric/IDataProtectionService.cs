@@ -2,6 +2,9 @@
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using Microsoft.ServiceFabric.Services.Remoting;
+using Microsoft.ServiceFabric.Services.Remoting.FabricTransport;
+
+[assembly: FabricTransportServiceRemotingProvider(RemotingListener = RemotingListener.CompatListener, RemotingClient = RemotingClient.V2Client)]
 
 namespace AspNetCore.DataProtection.ServiceFabric
 {

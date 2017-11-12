@@ -1,5 +1,4 @@
-﻿using Microsoft.ServiceFabric.Data;
-using Microsoft.ServiceFabric.Services.Runtime;
+﻿using Microsoft.ServiceFabric.Services.Runtime;
 using System;
 using System.Diagnostics;
 using System.Threading;
@@ -19,8 +18,7 @@ namespace AspNetCore.DataProtection.ServiceFabric
                 // Registering a service maps a service type name to a .NET type.
                 // When Service Fabric creates an instance of this service type,
                 // an instance of the class is created in this host process.
-
-                ServiceRuntime.RegisterServiceAsync("DataProtectionServiceType", context => new DataProtectionService(context, new ReliableStateManager(context))).GetAwaiter().GetResult();
+                ServiceRuntime.RegisterServiceAsync("DataProtectionServiceType", context => new DataProtectionService(context)).GetAwaiter().GetResult();
                 ServiceEventSource.Current.ServiceTypeRegistered(Process.GetCurrentProcess().Id, typeof(DataProtectionService).Name);
 
                 // Prevents this host process from terminating so services keep running.
