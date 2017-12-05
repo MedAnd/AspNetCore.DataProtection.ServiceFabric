@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.DataProtection;
+﻿using AspNetCore.DataProtection.ServiceFabric.Repositories;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.DataProtection.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace ServiceFabric.DataProtection.Web
+namespace AspNetCore.DataProtection.ServiceFabric.Extensions
 {
     public static class DataProtectionBuilderExtensions
     {

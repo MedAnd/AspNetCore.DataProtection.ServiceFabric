@@ -1,4 +1,4 @@
-﻿using AspNetCore.DataProtection.ServiceFabric;
+﻿using AspNetCore.DataProtection.ServiceFabric.Interfaces;
 using Microsoft.AspNetCore.DataProtection.Repositories;
 using Microsoft.ServiceFabric.Services.Client;
 using Microsoft.ServiceFabric.Services.Remoting.Client;
@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
 
-namespace ServiceFabric.DataProtection.Web
+namespace AspNetCore.DataProtection.ServiceFabric.Repositories
 {
     public class ServiceFabricXmlRepository : IXmlRepository
     {

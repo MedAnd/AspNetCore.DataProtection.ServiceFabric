@@ -6,7 +6,7 @@ using Microsoft.ServiceFabric.Services.Remoting.FabricTransport;
 
 [assembly: FabricTransportServiceRemotingProvider(RemotingListener = RemotingListener.CompatListener, RemotingClient = RemotingClient.V2Client)]
 
-namespace AspNetCore.DataProtection.ServiceFabric
+namespace AspNetCore.DataProtection.ServiceFabric.Interfaces
 {
     public interface IDataProtectionService : IService
     {
