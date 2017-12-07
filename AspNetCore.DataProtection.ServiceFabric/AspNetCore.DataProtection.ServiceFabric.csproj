@@ -9,6 +9,7 @@
     <AssemblyName>AspNetCore.DataProtection.ServiceFabric</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>AspNetCore.DataProtection.ServiceFabric</PackageId>
+    <Title>AspNetCore.DataProtection.ServiceFabric</Title>
     <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>

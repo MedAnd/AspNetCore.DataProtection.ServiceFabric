@@ -9,6 +9,7 @@
     <AssemblyName>AspNetCore.DataProtection.ServiceFabric.Common</AssemblyName>
     <OutputType>Library</OutputType>
     <PackageId>AspNetCore.DataProtection.ServiceFabric.Common</PackageId>
+    <Title>AspNetCore.DataProtection.ServiceFabric.Common</Title>
     <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
