@@ -15,6 +15,13 @@
     <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
     <GenerateAssemblyRepositoryUrl>false</GenerateAssemblyRepositoryUrl>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <Version>1.0.3</Version>
+    <Authors>Medic Consulting</Authors>
+    <PackageReleaseNotes>Initial release set to 1.0.3 as this library is meant to be used with AspNetCore.DataProtection.ServiceFabric version 1.0.3</PackageReleaseNotes>
+    <PackageTags>ServiceFabric Service Fabric .Net Core Data Protection SFNuGet</PackageTags>
+    <PackageIconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/MedAnd/AspNetCore.DataProtection.ServiceFabric</PackageProjectUrl>
+    <PackageLicenseUrl>http://opensource.org/licenses/MS-PL</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
