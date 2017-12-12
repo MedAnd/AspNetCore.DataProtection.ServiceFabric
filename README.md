@@ -5,7 +5,7 @@ A ready to use ASP.NET Core DataProtection Service Fabric microservice, used for
 
 ### Getting started - Installing the DataProtection microservice
 
-Open your existing Service Fabric .NET Core solution in Visual Studio 2017, then in Solution Explorer right-click on the solution node and select the Manage Nuget Packages for Solution menu. Search for the AspNetCore.DataProtection.ServiceFabric package, make sure to check the master Service Fabric application project and click the Install button. After the installation completes, in the ApplicationPackageRoot there will be a new AspNetCore.DataProtection.ServiceFabricPkg folder. 
+Open your existing Service Fabric .NET Core solution in Visual Studio 2017, then in Solution Explorer right-click on the solution node and select the Manage Nuget Packages for Solution menu. Search for the AspNetCore.DataProtection.ServiceFabric package, make sure to check the master Service Fabric application project and click the Install button. After the installation completes, in the ApplicationPackageRoot there will be a new AspNetCore.DataProtection.ServiceFabricPkg folder.
 
 The AspNetCore.DataProtection.ServiceFabric microservice can also be installed via the Package Manager Console:
 
@@ -13,7 +13,7 @@ The AspNetCore.DataProtection.ServiceFabric microservice can also be installed v
 Install-Package AspNetCore.DataProtection.ServiceFabric
 ```
 
-Before you publish to Service Fabric though, make sure to check the ApplicationManifest.xml file, setting the AspNetCore.DataProtection.ServiceFabric TargetReplicaSetSize, MinReplicaSetSize and PartitionCount relevant for your cluster or development environment.
+Before you publish to Service Fabric though, make sure to check the ApplicationManifest.xml file, setting the AspNetCore.DataProtection.ServiceFabric TargetReplicaSetSize and MinReplicaSetSize relevant for your cluster or development environment. Note the PartitionCount and InstanceCount should both be set to 1.
 
 
 ### Using the DataProtection microservice in your ASP.NET Core projects
