@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.ServiceFabric.Services.Remoting;
+using Microsoft.ServiceFabric.Services.Remoting.FabricTransport;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Microsoft.ServiceFabric.Services.Remoting;
-using Microsoft.ServiceFabric.Services.Remoting.FabricTransport;
 
-[assembly: FabricTransportServiceRemotingProvider(RemotingListener = RemotingListener.CompatListener, RemotingClient = RemotingClient.V2Client)]
-
+[assembly: FabricTransportServiceRemotingProvider(RemotingListener = RemotingListener.V2Listener, RemotingClient = RemotingClient.V2Client)]
 namespace AspNetCore.DataProtection.ServiceFabric.Interfaces
 {
     public interface IDataProtectionService : IService
