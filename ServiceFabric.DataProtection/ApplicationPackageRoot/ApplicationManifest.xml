@@ -14,7 +14,7 @@
     <ConfigOverrides />
   </ServiceManifestImport>
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="AspNetCore.DataProtection.ServiceFabricPkg" ServiceManifestVersion="1.0.3" />
+    <ServiceManifestRef ServiceManifestName="AspNetCore.DataProtection.ServiceFabricPkg" ServiceManifestVersion="1.0.4" />
     <ConfigOverrides />
   </ServiceManifestImport>
   <DefaultServices>
