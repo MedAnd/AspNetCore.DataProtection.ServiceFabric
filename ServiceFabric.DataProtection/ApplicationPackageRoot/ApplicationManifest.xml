@@ -4,7 +4,6 @@
     <Parameter Name="TestWeb_InstanceCount" DefaultValue="-1" />
     <Parameter Name="DataProtectionService_MinReplicaSetSize" DefaultValue="2" />
     <Parameter Name="DataProtectionService_TargetReplicaSetSize" DefaultValue="3" />
-    <Parameter Name="DataProtectionService_PartitionCount" DefaultValue="1" />
   </Parameters>
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
        should match the Name and Version attributes of the ServiceManifest element defined in the 

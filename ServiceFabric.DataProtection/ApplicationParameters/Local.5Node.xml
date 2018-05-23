@@ -4,6 +4,5 @@
     <Parameter Name="TestWeb_InstanceCount" Value="1" />
     <Parameter Name="DataProtectionService_MinReplicaSetSize" Value="2" />
     <Parameter Name="DataProtectionService_TargetReplicaSetSize" Value="3" />
-    <Parameter Name="DataProtectionService_PartitionCount" Value="1" />
   </Parameters>
 </Application>
