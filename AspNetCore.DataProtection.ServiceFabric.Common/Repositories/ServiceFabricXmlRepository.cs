@@ -10,9 +10,16 @@ namespace AspNetCore.DataProtection.ServiceFabric.Repositories
 {
     public class ServiceFabricXmlRepository : IXmlRepository
     {
+        private readonly string _serviceUri;
+
+        public ServiceFabricXmlRepository(string serviceUri)
+        {
+            _serviceUri = serviceUri;
+        }
+
         public IReadOnlyCollection<XElement> GetAllElements()
         {
-            var proxy = ServiceProxy.Create<IDataProtectionService>(new Uri("fabric:/ServiceFabric.DataProtection/DataProtectionService"), new ServicePartitionKey());
+            var proxy = ServiceProxy.Create<IDataProtectionService>(new Uri(_serviceUri), new ServicePartitionKey());
             return proxy.GetAllDataProtectionElements().Result.AsReadOnly();
         }
 
@@ -23,7 +30,7 @@ namespace AspNetCore.DataProtection.ServiceFabric.Repositories
                 throw new ArgumentNullException(nameof(element));
             }
 
-            var proxy = ServiceProxy.Create<IDataProtectionService>(new Uri("fabric:/ServiceFabric.DataProtection/DataProtectionService"), new ServicePartitionKey());
+            var proxy = ServiceProxy.Create<IDataProtectionService>(new Uri(_serviceUri), new ServicePartitionKey());
             proxy.AddDataProtectionElement(element).Wait();
         }
     }

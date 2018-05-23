@@ -8,14 +8,21 @@ namespace AspNetCore.DataProtection.ServiceFabric.Extensions
 {
     public static class DataProtectionBuilderExtensions
     {
-        public static IDataProtectionBuilder PersistKeysToServiceFabric(this IDataProtectionBuilder builder)
+        /// <summary>
+        /// Config DataProtection provider with ServiceFabric
+        /// </summary>
+        /// <param name="builder"></param>
+        /// <param name="serviceUri">service uri of AspNetCore.DataProtection.ServiceFabric, ex: "fabric:/ServiceFabric.DataProtection/DataProtectionService" </param>
+        /// <returns></returns>
+        public static IDataProtectionBuilder PersistKeysToServiceFabric(this IDataProtectionBuilder builder,
+            string serviceUri = "fabric:/ServiceFabric.DataProtection/DataProtectionService")
         {
             if (builder == null)
             {
                 throw new ArgumentNullException(nameof(builder));
             }
 
-            return builder.Use(ServiceDescriptor.Singleton<IXmlRepository>(services => new ServiceFabricXmlRepository()));
+            return builder.Use(ServiceDescriptor.Singleton<IXmlRepository>(services => new ServiceFabricXmlRepository(serviceUri)));
         }
 
         public static IDataProtectionBuilder Use(this IDataProtectionBuilder builder, ServiceDescriptor descriptor)
