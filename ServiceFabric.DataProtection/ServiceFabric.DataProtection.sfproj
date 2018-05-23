@@ -29,7 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AspNetCore.DataProtection.ServiceFabric\AspNetCore.DataProtection.ServiceFabric.csproj" />
-    <ProjectReference Include="..\ServiceFabric.DataProtection.Web\ServiceFabric.DataProtection.Web.csproj" />
+    <ProjectReference Include="..\TestWeb\TestWeb.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

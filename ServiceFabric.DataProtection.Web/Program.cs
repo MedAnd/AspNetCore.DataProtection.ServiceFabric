@@ -30,8 +30,15 @@ namespace ServiceFabric.DataProtection.Web
                         }
                     case "servicefabric-kestrel":
                         {
-                            ServiceRuntime.RegisterServiceAsync("WebServiceType", context => new WebService(context, ServerType.Kestrel)).GetAwaiter().GetResult();
-                            Thread.Sleep(Timeout.Infinite);
+                            try
+                            {
+                                ServiceRuntime.RegisterServiceAsync("WebServiceType", context => new WebService(context, ServerType.Kestrel)).GetAwaiter().GetResult();
+                                Thread.Sleep(Timeout.Infinite);
+                            }
+                            catch (Exception ex)
+                            {
+                                ServiceEventSource.Current.Message(ex.Message);
+                            }
                             break;
                         }
                     case "weblistener":
