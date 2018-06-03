@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceFabric.DataProtectio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.DataProtection.ServiceFabric", "AspNetCore.DataProtection.ServiceFabric\AspNetCore.DataProtection.ServiceFabric.csproj", "{7FBABD19-5B5A-47E7-8E20-C62A9751B354}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.DataProtection.ServiceFabric.Common", "AspNetCore.DataProtection.ServiceFabric.Common\AspNetCore.DataProtection.ServiceFabric.Common.csproj", "{BCA77547-9671-4EC9-BDA6-C6C1F7B41CC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.DataProtection.ServiceFabric.Common", "AspNetCore.DataProtection.ServiceFabric.Common\AspNetCore.DataProtection.ServiceFabric.Common.csproj", "{BCA77547-9671-4EC9-BDA6-C6C1F7B41CC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,7 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A412C9FE-DD03-40D8-80F7-F9806A083140}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{A412C9FE-DD03-40D8-80F7-F9806A083140}.Debug|Any CPU.Deploy.0 = Debug|x64
 		{A412C9FE-DD03-40D8-80F7-F9806A083140}.Debug|x64.ActiveCfg = Debug|x64
 		{A412C9FE-DD03-40D8-80F7-F9806A083140}.Debug|x64.Build.0 = Debug|x64
 		{A412C9FE-DD03-40D8-80F7-F9806A083140}.Debug|x64.Deploy.0 = Debug|x64
