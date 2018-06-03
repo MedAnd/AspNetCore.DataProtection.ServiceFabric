@@ -30,9 +30,10 @@ In the ConfigureServices method of your Startup.cs, don't forget to add:
 // Add Service Fabric DataProtection
 services.AddDataProtection()
     .SetApplicationName("ServiceFabric-DataProtection-Your-App-Name")
-    .PersistKeysToServiceFabric();
+    .PersistKeysToServiceFabric(dataProtectionServiceUri);
 ```
 
+Where dataProtectionServiceUri is the uri to your instance of the AspNetCore.DataProtection.ServiceFabric microservice, for example "fabric:/ServiceFabric.DataProtection/DataProtectionService".
 You'll also need these two using statements:
 
 ```csharp
