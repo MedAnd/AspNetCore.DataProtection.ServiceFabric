@@ -4,7 +4,7 @@
     <Description>Learn more about this project at www.medic-consulting.com</Description>
     <RepositoryUrl>https://github.com/MedAnd/AspNetCore.DataProtection.ServiceFabric</RepositoryUrl>
     <AssemblyTitle>AspNetCore.DataProtection.ServiceFabric</AssemblyTitle>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>AspNetCore.DataProtection.ServiceFabric</AssemblyName>
     <OutputType>Exe</OutputType>
@@ -17,13 +17,14 @@
     <GenerateAssemblyRepositoryUrl>false</GenerateAssemblyRepositoryUrl>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <Authors>Medic Consulting</Authors>
     <PackageProjectUrl>https://github.com/MedAnd/AspNetCore.DataProtection.ServiceFabric</PackageProjectUrl>
     <PackageIconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</PackageIconUrl>
     <PackageLicenseUrl>http://opensource.org/licenses/MS-PL</PackageLicenseUrl>
     <PackageTags>ServiceFabric Service Fabric .Net Core Data Protection SFNuGet</PackageTags>
-    <PackageReleaseNotes>1.0.4 use .NET Core 2.0, upgrade SF nuget to 3.1.274
+    <PackageReleaseNotes>1.0.5 use .NET Core 2.1, upgrade SF nuget to 3.1.283
+1.0.4 use .NET Core 2.0, upgrade SF nuget to 3.1.274
 1.0.3 Refactor common code into AspNetCore.DataProtection.ServiceFabric.Common library for sharing and nuget consumption</PackageReleaseNotes>
   </PropertyGroup>
 
@@ -36,9 +37,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.ServiceFabric" Version="6.2.274" />
-    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="3.1.274" />
-    <PackageReference Include="Microsoft.ServiceFabric.Services.Remoting" Version="3.1.274" />
+    <PackageReference Include="Microsoft.ServiceFabric" Version="6.2.283" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="3.1.283" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services.Remoting" Version="3.1.283" />
   </ItemGroup>
 
   <ItemGroup>
