@@ -1,10 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <Description>Learn more about this project at www.medic-consulting.com</Description>
     <RepositoryUrl>https://github.com/MedAnd/AspNetCore.DataProtection.ServiceFabric</RepositoryUrl>
     <AssemblyTitle>AspNetCore.DataProtection.ServiceFabric</AssemblyTitle>
-    <TargetFramework>net46</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>AspNetCore.DataProtection.ServiceFabric</AssemblyName>
     <OutputType>Exe</OutputType>
@@ -17,7 +17,7 @@
     <GenerateAssemblyRepositoryUrl>false</GenerateAssemblyRepositoryUrl>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <Authors>Medic Consulting</Authors>
     <PackageProjectUrl>https://github.com/MedAnd/AspNetCore.DataProtection.ServiceFabric</PackageProjectUrl>
     <PackageIconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</PackageIconUrl>
@@ -35,14 +35,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.ServiceFabric" Version="6.2.283" />
-    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="3.1.283" />
-    <PackageReference Include="Microsoft.ServiceFabric.Services.Remoting" Version="3.1.283" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
+    <PackageReference Include="Microsoft.ServiceFabric" Version="6.3.116" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="3.2.116" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services.Remoting" Version="3.2.116" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
