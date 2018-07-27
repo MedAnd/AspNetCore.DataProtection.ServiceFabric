@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ServiceManifest Name="ServiceFabric.DataProtection.WebPkg"
-                 Version="1.0.0"
+                 Version="1.0.5"
                  xmlns="http://schemas.microsoft.com/2011/01/fabric"
                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -11,11 +11,11 @@
   </ServiceTypes>
 
   <!-- Code package is your service executable. -->
-  <CodePackage Name="Code" Version="1.0.0">
+  <CodePackage Name="Code" Version="1.0.5">
     <EntryPoint>
       <ExeHost>
-        <Program>AspNetCore.DataProtection.ServiceFabric.exe</Program>
-        <!-- <Program>entryPoint.sh</Program>  -->
+        <!-- <Program>AspNetCore.DataProtection.ServiceFabric.exe</Program> -->
+        <Program>entryPoint.sh</Program>
         <Arguments>--host servicefabric-kestrel</Arguments>
         <WorkingFolder>CodePackage</WorkingFolder>
         <ConsoleRedirection FileRetentionCount="5" FileMaxSizeInKb="2048" />
