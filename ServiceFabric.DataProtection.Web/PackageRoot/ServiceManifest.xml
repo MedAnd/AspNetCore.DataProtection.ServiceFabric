@@ -14,7 +14,8 @@
   <CodePackage Name="Code" Version="1.0.0">
     <EntryPoint>
       <ExeHost>
-        <Program>ServiceFabric.DataProtection.Web.exe</Program>
+        <Program>AspNetCore.DataProtection.ServiceFabric.exe</Program>
+        <!-- <Program>entryPoint.sh</Program>  -->
         <Arguments>--host servicefabric-kestrel</Arguments>
         <WorkingFolder>CodePackage</WorkingFolder>
         <ConsoleRedirection FileRetentionCount="5" FileMaxSizeInKb="2048" />

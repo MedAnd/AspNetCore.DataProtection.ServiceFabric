@@ -15,6 +15,7 @@
     <EntryPoint>
       <ExeHost>
         <Program>AspNetCore.DataProtection.ServiceFabric.exe</Program>
+        <!-- <Program>entryPoint.sh</Program>  -->
       </ExeHost>
     </EntryPoint>
   </CodePackage>
