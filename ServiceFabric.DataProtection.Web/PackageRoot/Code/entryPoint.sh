@@ -11,5 +11,7 @@ check_errs()
 DIR=`dirname $0`
 echo 0x3f > /proc/self/coredump_filter
 source $DIR/dotnet-include.sh
+export LD_DEBUG=all 
+export LD_LIBRARY_PATH="/opt/microsoft/servicefabric/bin/Fabric/Fabric.Code"
 dotnet $DIR/ServiceFabric.DataProtection.Web.dll $1 $2
 check_errs $?

@@ -9,9 +9,9 @@ dotnet build $DIR/ServiceFabric.DataProtection.sln -v normal
 cd $ROOTDIR/ServiceFabric.DataProtection/ApplicationPackageRoot/
     cp ApplicationManifest.xml ../ 
 cd $ROOTDIR/AspNetCore.DataProtection.ServiceFabric/
-    dotnet publish -o ../ServiceFabric.DataProtection/Pkg/AspNetCore.DataProtection.ServiceFabricPkg/Code -r ubuntu.16.04-x64
-    cp -R ./PackageRoot/* ../ServiceFabric.DataProtection/Pkg/AspNetCore.DataProtection.ServiceFabricPkg/
+    dotnet publish -o ../ServiceFabric.DataProtection/AspNetCore.DataProtection.ServiceFabricPkg/Code -r ubuntu.16.04-x64
+    cp -R ./PackageRoot/* ../ServiceFabric.DataProtection/AspNetCore.DataProtection.ServiceFabricPkg/
 cd $ROOTDIR/ServiceFabric.DataProtection.Web/
-    dotnet publish -o ../ServiceFabric.DataProtection/Pkg/ServiceFabric.DataProtection.WebPkg/Code -r ubuntu.16.04-x64
-    cp -R ./PackageRoot/* ../ServiceFabric.DataProtection/Pkg/ServiceFabric.DataProtection.WebPkg/
+    dotnet publish -o ../ServiceFabric.DataProtection/ServiceFabric.DataProtection.WebPkg/Code -r ubuntu.16.04-x64
+    cp -R ./PackageRoot/* ../ServiceFabric.DataProtection/ServiceFabric.DataProtection.WebPkg/
 cd -
