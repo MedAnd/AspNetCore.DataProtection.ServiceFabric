@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Swashbuckle.AspNetCore.Swagger;
+using NSwag.AspNetCore;
+using System.Reflection;
+using NJsonSchema;
 using System.Fabric;
 
 namespace ServiceFabric.DataProtection.Web
@@ -45,10 +47,7 @@ namespace ServiceFabric.DataProtection.Web
                     .SetApplicationName("ServiceFabric-DataProtection-Web")
                     .PersistKeysToServiceFabric(dataProtectionServiceUri);
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Info { Title = "AspNetCore.DataProtection.ServiceFabric API", Version = "v1" });
-            });
+            services.AddSwagger();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,18 +56,27 @@ namespace ServiceFabric.DataProtection.Web
             //loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             //loggerFactory.AddDebug();
 
+            // Enable the Swagger UI middleware and the Swagger generator
+            app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, settings =>
+            {
+                settings.DocExpansion = "full";
+                settings.GeneratorSettings.DefaultPropertyNameHandling = PropertyNameHandling.CamelCase;
+                settings.GeneratorSettings.IsAspNetCore = true;
+                settings.GeneratorSettings.Title = "AspNetCore.DataProtection.ServiceFabric API";
+                settings.GeneratorSettings.Version = "v1.05";
+                settings.GeneratorSettings.Description = "A cross platform & ready to use ASP.NET Core DataProtection Service Fabric microservice, " +
+                    "used for protecting and unprotecting sensitive data such as tokens and cookies in a multi-node & load balanced environment.";
+
+                settings.PostProcess = doc =>
+                {
+                    doc.Info.Contact = new NSwag.SwaggerContact
+                    {
+                        Url = "https://github.com/MedAnd/AspNetCore.DataProtection.ServiceFabric"
+                    };
+                };
+            });
+
             app.UseMvc();
-
-            app.UseSwagger(c =>
-            {
-                c.PreSerializeFilters.Add((swagger, httpReq) => swagger.Host = httpReq.Host.Value);
-            });
-
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "AspNetCore.DataProtection.ServiceFabric API V1 Docs");
-            });
-           
         }
     }
 }
