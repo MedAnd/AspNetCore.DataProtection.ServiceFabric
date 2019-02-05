@@ -4,7 +4,7 @@
     <Description>Learn more about this project at www.medic-consulting.com</Description>
     <RepositoryUrl>https://github.com/MedAnd/AspNetCore.DataProtection.ServiceFabric</RepositoryUrl>
     <AssemblyTitle>AspNetCore.DataProtection.ServiceFabric</AssemblyTitle>
-    <TargetFramework>net46</TargetFramework>
+    <TargetFramework>net472</TargetFramework>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>AspNetCore.DataProtection.ServiceFabric</AssemblyName>
     <OutputType>Exe</OutputType>
@@ -28,9 +28,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.ServiceFabric" Version="5.6.220" />
-    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="2.6.220" />
-    <PackageReference Include="Microsoft.ServiceFabric.Services.Remoting" Version="2.6.220" />
+    <PackageReference Include="Microsoft.ServiceFabric" Version="6.4.638" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="3.3.638" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services.Remoting" Version="3.3.638" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
