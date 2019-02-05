@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using AspNetCore.DataProtection.ServiceFabric.Extensions;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
+using System.Fabric;
 
 namespace ServiceFabric.DataProtection.Web
 {
@@ -28,10 +30,20 @@ namespace ServiceFabric.DataProtection.Web
             // Add framework services.
             services.AddMvc();
 
+            string dataProtectionServiceUri = string.Empty;
+            try
+            {
+                dataProtectionServiceUri = $"{FabricRuntime.GetActivationContext().ApplicationName}/DataProtectionService";
+            }
+            catch
+            {
+                dataProtectionServiceUri = "fabric:/ServiceFabric.DataProtection/DataProtectionService";
+            }
+
             // Add Service Fabric DataProtection
             services.AddDataProtection()
                     .SetApplicationName("ServiceFabric-DataProtection-Web")
-                    .PersistKeysToServiceFabric();
+                    .PersistKeysToServiceFabric(dataProtectionServiceUri);
 
             services.AddSwaggerGen(c =>
             {
@@ -56,6 +68,7 @@ namespace ServiceFabric.DataProtection.Web
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "AspNetCore.DataProtection.ServiceFabric API V1 Docs");
             });
+           
         }
     }
 }

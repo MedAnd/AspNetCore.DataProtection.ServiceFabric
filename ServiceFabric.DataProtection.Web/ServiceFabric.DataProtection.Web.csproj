@@ -58,4 +58,8 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetCore.DataProtection.ServiceFabric.Common\AspNetCore.DataProtection.ServiceFabric.Common.csproj" />
+  </ItemGroup>
+
 </Project>

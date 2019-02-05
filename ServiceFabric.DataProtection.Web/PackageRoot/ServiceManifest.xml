@@ -15,7 +15,7 @@
     <EntryPoint>
       <ExeHost>
         <Program>ServiceFabric.DataProtection.Web.exe</Program>
-        <Arguments>--host servicefabric-weblistener</Arguments>
+        <Arguments>--host servicefabric-kestrel</Arguments>
         <WorkingFolder>CodePackage</WorkingFolder>
         <ConsoleRedirection FileRetentionCount="5" FileMaxSizeInKb="2048" />
       </ExeHost>
