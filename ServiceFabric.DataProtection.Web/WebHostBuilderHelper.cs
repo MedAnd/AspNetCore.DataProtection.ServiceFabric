@@ -2,6 +2,7 @@
 using Microsoft.Net.Http.Server;
 using System.Fabric;
 using System.IO;
+using Microsoft.AspNetCore.Server.HttpSys;
 
 namespace ServiceFabric.DataProtection.Web
 {
@@ -22,10 +23,10 @@ namespace ServiceFabric.DataProtection.Web
                 case ServerType.WebListener:
                     {
                         IWebHostBuilder webHostBuilder = new WebHostBuilder()
-                            .UseWebListener(options =>
+                            .UseHttpSys(options =>
                             {
-                                options.ListenerSettings.Authentication.Schemes = AuthenticationSchemes.None;
-                                options.ListenerSettings.Authentication.AllowAnonymous = true;
+                                options.Authentication.Schemes = Microsoft.AspNetCore.Server.HttpSys.AuthenticationSchemes.None;
+                                options.Authentication.AllowAnonymous = true;
                             });
 
                         return ConfigureWebHostBuilder(webHostBuilder, protocol, port);
@@ -44,7 +45,7 @@ namespace ServiceFabric.DataProtection.Web
 
         static IWebHost ConfigureWebHostBuilder(IWebHostBuilder webHostBuilder, string protocol, string port)
         {
-            return webHostBuilder
+            return webHostBuilder                
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseWebRoot(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot"))
                 .UseStartup<Startup>()
@@ -56,6 +57,7 @@ namespace ServiceFabric.DataProtection.Web
     enum ServerType
     {
         Kestrel,
-        WebListener
+        WebListener,
+
     }
 }
