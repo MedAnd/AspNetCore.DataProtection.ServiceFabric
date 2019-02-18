@@ -45,11 +45,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />
-    <PackageReference Include="Microsoft.ServiceFabric" Version="6.4.638" />
     <PackageReference Include="Microsoft.ServiceFabric.AspNetCore.Kestrel" Version="3.3.638" />
     <PackageReference Include="Microsoft.ServiceFabric.AspNetCore.WebListener" Version="3.3.638" />
-    <PackageReference Include="Microsoft.ServiceFabric.Data" Version="3.3.638" />
-    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="3.3.638" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
   </ItemGroup>
 

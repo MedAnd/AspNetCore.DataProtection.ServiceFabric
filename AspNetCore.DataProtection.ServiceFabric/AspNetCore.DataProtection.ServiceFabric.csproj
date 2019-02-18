@@ -17,13 +17,13 @@
     <GenerateAssemblyRepositoryUrl>false</GenerateAssemblyRepositoryUrl>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <IsServiceFabricServiceProject>True</IsServiceFabricServiceProject>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <Authors>Medic Consulting</Authors>
     <PackageProjectUrl>https://github.com/MedAnd/AspNetCore.DataProtection.ServiceFabric</PackageProjectUrl>
     <PackageIconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</PackageIconUrl>
     <PackageLicenseUrl>http://opensource.org/licenses/MS-PL</PackageLicenseUrl>
     <PackageTags>ServiceFabric Service Fabric .Net Core Data Protection SFNuGet</PackageTags>
-    <PackageReleaseNotes>Refactor common code into AspNetCore.DataProtection.ServiceFabric.Common library for sharing and nuget consumption</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated Service Fabric SDK, nuget packages and .NET TargetFramework to net472. Changed UseWebListener to UseHttpSys etc.</PackageReleaseNotes>
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
